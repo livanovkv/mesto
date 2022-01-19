@@ -51,8 +51,8 @@ function openPopup(event) {
     popupFormInputAbout.placeholder = popupFormInputAboutPlaceholder;
   });
 
-  console.log(popupFormInputName.value);
-  console.log(popupFormInputAbout.value);
+  //console.log(popupFormInputName.value);
+  //console.log(popupFormInputAbout.value);
   
 }
 
@@ -70,22 +70,13 @@ function getProfileFormValue (event) {
   event.preventDefault();
   popupName.textContent = popupFormInputName.value;
   popupAbout.textContent = popupFormInputAbout.value;
-  console.log(popupName.value);
-  console.log(popupName.value);
+  //console.log(popupFormInputName.value);
+  //console.log(popupFormInputAbout.value);
   closePopup();
 };
 
 
+//кнопка "сохранить"-----------------------------------------
 
-//проверяем нажатие вне кнопок и формы-----------------------------------------
-popupForm.addEventListener('click', function(event) {
-  if(!event.defaultPrevented) {
-    closePopup();
-  }
-})
-
-editProfileForm.addEventListener('click', function(e) {
-  e.preventDefault();
-})
 
 editProfileForm.addEventListener('submit', getProfileFormValue);

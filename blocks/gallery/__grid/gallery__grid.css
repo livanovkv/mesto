@@ -17,5 +17,6 @@
     .gallery__grid {
         grid-template-columns: 1fr;
         justify-items: center;
+        gap: 20px;
     }
   }

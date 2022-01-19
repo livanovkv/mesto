@@ -3,24 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cервис Mesto</title>
-  <meta name="description" content="Спринт 4 сервис Mesto">
-  <meta name="keywords" content="js">
+  <title>Cервис Mesto - Базовый js и работа с DOM</title>
+  <meta name="description" content="Базовый js и работа с DOM">
+  <meta name="keywords" content="js, работа с DOM">
   <meta name="author" content="Константин Ливанов">
   <link rel="stylesheet" href="pages/index.css">
- <!-- <link
-    rel="shortcut icon"
-    type="image/png"
-    sizes="32x32"
-    href="images/favicon-32x32.png"
-  >-->
 </head>
 <body class="page">
-
   <header class="header">
     <a href="#" class="header__logo" title="Mesto"></a>
   </header>
   <main class="content">
+    <!--Профиль-->
     <section class="profile">
       <div class="profile__avatar">
         <img src="images/ji_custo_ico.png" alt="" class="profile__avatar-image">
@@ -31,8 +25,9 @@
         <p class="profile__subtitle">Исследователь океана</p>
         
       </div>
-      <button class="add-button"><img src="images/button_ico.svg" alt="" class="add-button__icon"></button>
+      <button class="add-button profile__add-button"><img src="images/button_ico.svg" alt="" class="add-button__icon"></button>
     </section>
+    <!--Галлерея-->
     <section class="gallery">
       <ul class="gallery__grid">
         <li class="gallery__item">

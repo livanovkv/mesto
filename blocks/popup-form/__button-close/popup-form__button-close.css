@@ -9,6 +9,7 @@
     right: -40px;
     border: none;
     background-image: url(../../../images/close_ico.svg);
+    background-size: cover;
     transition: 0.5s;
 }
 
@@ -19,6 +20,9 @@
 
 @media screen and (max-width: 374px) {
     .popup-form__button-close {
-       right: 0px;
+        width: 20px;
+        height: 20px;
+        right: 0px;
+        top: -38px;
     }
   }

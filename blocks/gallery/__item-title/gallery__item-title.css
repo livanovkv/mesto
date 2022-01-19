@@ -10,3 +10,27 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
+@media screen and (max-width: 840px) {
+  .gallery__item-title {
+    max-width: 150px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gallery__item-title {
+    max-width: 190px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .gallery__item-title {
+    max-width: 120px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .gallery__item-title {
+    max-width: 190px;
+  }
+}

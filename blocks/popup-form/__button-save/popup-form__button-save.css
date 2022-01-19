@@ -8,7 +8,7 @@
     background-color: #000000;
     border-radius: 2px;
     border: none;
-    margin: 48px 36px 37px;
+    margin: 50px 36px 37px;
     font-size: 18px;
     line-height: 22px;
     transition: 0.5s;
@@ -21,6 +21,8 @@
 @media screen and (max-width: 767px) {
     .popup-form__button-save  {
       width: 238px;
-      margin: 48px 22px 25px;
+      margin: 45px auto 25px;
+      font-size: 14px;
+      line-height: 17px;
     }
   }

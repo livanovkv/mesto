@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <meta name="author" content="Константин Ливанов">
   <link rel="stylesheet" href="pages/index.css">
 </head>
+
 <body class="page">
   <header class="header">
     <a href="#" class="header__logo" title="Mesto"></a>
@@ -16,77 +18,78 @@
   <main class="content">
     <!--Профиль-->
     <section class="profile">
-      <div class="profile__avatar">
-        <img src="images/ji_custo_ico.png" alt="" class="profile__avatar-image">
-      </div>
+      <img src="images/ji_custo_ico.png" alt="Аватар профиля" class="profile__avatar-image">
       <div class="profile__info">
         <h1 class="profile__title">Жак-Ив Кусто</h1>
-        <button class="profile__edit-button"><img src="images/profile_ico.svg" alt=""></button>
+        <button class="profile__edit-button" type="button" aria-label="Редактировать"></button>
         <p class="profile__subtitle">Исследователь океана</p>
-        
       </div>
-      <button class="add-button profile__add-button"><img src="images/button_ico.svg" alt="" class="add-button__icon"></button>
+      <button class="profile__add-button" type="button" aria-label="Добавить"></button>
     </section>
     <!--Галлерея-->
     <section class="gallery">
       <ul class="gallery__grid">
-        <li class="gallery__item">
-          <img src="images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск" class="gallery__item-image">
-          <div class="gallery__item-description">
-            <h2 class="gallery__item-title">Карачаевск</h2>
-            <button class="gallery__choise-button"></button>    
+        <li class="card">
+          <img src="images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск" class="card__image">
+          <div class="card__description">
+            <h2 class="card__title">Карачаевск</h2>
+            <button class="card__choise-button" type="button" aria-label="Добавить в избранное"></button>
           </div>
         </li>
-        <li class="gallery__item">
-          <img src="images/elbrus.png" alt="Гора Эльбрус" class="gallery__item-image">
-          <div class="gallery__item-description">
-            <h2 class="gallery__item-title">Гора Эльбрус</h2>
-            <button class="gallery__choise-button"></button>    
+        <li class="card">
+          <img src="images/elbrus.png" alt="Гора Эльбрус" class="card__image">
+          <div class="card__description">
+            <h2 class="card__title">Гора Эльбрус</h2>
+            <button class="card__choise-button" type="button" aria-label="Добавить в избранное"></button>
           </div>
         </li>
-        <li class="gallery__item">
-          <img src="images/dombay.png" alt="Домбай" class="gallery__item-image">
-          <div class="gallery__item-description">
-            <h2 class="gallery__item-title">Домбай</h2>
-            <button class="gallery__choise-button"></button>    
+        <li class="card">
+          <img src="images/dombay.png" alt="Домбай" class="card__image">
+          <div class="card__description">
+            <h2 class="card__title">Домбай</h2>
+            <button class="card__choise-button" type="button" aria-label="Добавить в избранное"></button>
           </div>
         </li>
-        <li class="gallery__item">
-          <img src="images/elbrus.png" alt="Карачаевск" class="gallery__item-image">
-          <div class="gallery__item-description">
-            <h2 class="gallery__item-title">Гора Эльбрус</h2>
-            <button class="gallery__choise-button"></button>    
+        <li class="card">
+          <img src="images/elbrus.png" alt="Карачаевск" class="card__image">
+          <div class="card__description">
+            <h2 class="card__title">Гора Эльбрус</h2>
+            <button class="card__choise-button" type="button" aria-label="Добавить в избранное"></button>
           </div>
         </li>
-        <li class="gallery__item">
-          <img src="images/dombay.png" alt="Карачаевск" class="gallery__item-image">
-          <div class="gallery__item-description">
-            <h2 class="gallery__item-title">Домбай</h2>
-            <button class="gallery__choise-button"></button>    
+        <li class="card">
+          <img src="images/dombay.png" alt="Карачаевск" class="card__image">
+          <div class="card__description">
+            <h2 class="card__title">Домбай</h2>
+            <button class="card__choise-button" type="button" aria-label="Добавить в избранное"></button>
           </div>
         </li>
-        <li class="gallery__item">
-          <img src="images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаево-Черкескс" class="gallery__item-image">
-          <div class="gallery__item-description">
-            <h2 class="gallery__item-title">Карачаево-Черкескс</h2>
-            <button class="gallery__choise-button"></button>    
+        <li class="card">
+          <img src="images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаево-Черкескс" class="card__image">
+          <div class="card__description">
+            <h2 class="card__title">Карачаево-Черкескс</h2>
+            <button class="card__choise-button" type="button" aria-label="Добавить в избранное"></button>
           </div>
         </li>
       </ul>
     </section>
   </main>
   <footer class="footer">
-    <p class="footer__copyright">© 2021. Ливанов К.В.</p>
+    <p class="footer__copyright">&copy; 2021. Ливанов К.В.</p>
   </footer>
   <!--Popup форма редактирования профиля-->
   <div class="popup-form">
-    <form class="popup-form__profile">
-      <button class="popup-form__button-close"></button>
+    <div class="popup-form__profile">
+      <button class="popup-form__button-close" type="button" aria-label="Закрыть"></button>
       <h3 class="popup-form__profile-title">Редактировать профиль</h3>
-      <input class="popup-form__input" required placeholder="Имя" type="text" name="profile_name" tabindex="1">
-      <input class="popup-form__input" required placeholder="О себе" type="text" name="profile_about" tabindex="2">
-      <button type="submit" class="popup-form__button-save" tabindex="3">Сохранить</button>
-    </form>
+      <form class="popup-form__profile-form" name="profileform">
+        <input class="popup-form__input popup-form__input_name" required placeholder="Имя" type="text"
+          name="profile_name" tabindex="1">
+        <input class="popup-form__input popup-form__input_about" required placeholder="О себе" type="text"
+          name="profile_about" tabindex="2">
+        <button class="popup-form__button-save" type="submit" tabindex="3">Сохранить</button>
+      </form>
+    </div>
   </div>
   <script src="js/script.js"></script>
 </body>

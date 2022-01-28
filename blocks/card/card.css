@@ -1,8 +1,8 @@
-.gallery__item {
-  max-width: 282px;
-  max-height: 361px;
+.card {
   border-radius: 10px;
   overflow: hidden;
   background-color: #ffffff;
   position: relative;
+  display: grid;
+  grid-template-rows: 1fr 80px;
 }

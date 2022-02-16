@@ -1,6 +1,3 @@
-
-
-
 /** Задаем константы */
 
 /** Profile */
@@ -66,10 +63,28 @@ const initialCards = [
 /** Pop-up */
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  closePopupEventEscape();
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  removeEventEscape();
+}
+
+/** События на Escape */
+function eventEscape(event) {
+  if (event.key === 'Escape') {
+    const activePopup = document.querySelector('.popup_opened');
+    closePopup(activePopup);
+  }
+}
+
+function closePopupEventEscape() {
+  document.addEventListener('keydown', eventEscape);
+}
+
+function removeEventEscape() {
+  document.removeEventListener('keydown', eventEscape);
 }
 
 /** Pop-up форма редактирования профиля */
@@ -80,6 +95,7 @@ function popupFormProfile() {
   //console.log(popupFormInputName.value);
   //console.log(popupFormInputAbout.value);
   openPopup(editProfileFormOpen);
+  activePopupContent(editProfileFormOpen);
 }
 
 function getProfileFormValue(event) {
@@ -97,6 +113,7 @@ function getProfileFormValue(event) {
 function popupFormImageAdd() {
   openPopup(popupAddCardFormOpen);
   resetForm();
+  activePopupContent(popupAddCardFormOpen);
 }
 
 function getAddImageValue(event) {

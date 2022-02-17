@@ -93,8 +93,8 @@ function openPopupFormProfile() {
   popupFormInputAbout.value = popupAbout.textContent;
   //console.log(popupFormInputName.value);
   //console.log(popupFormInputAbout.value);
-  openPopup(editProfileFormOpen);
-  activePopupContent(editProfileFormOpen);
+  openPopup(editProfileForm);
+  activePopupContent(editProfileForm);
 }
 
 function handleProfileFormSubmit(event) {
@@ -110,9 +110,9 @@ function handleProfileFormSubmit(event) {
 
 /** Pop-up форма добавления картинок */
 function popupFormImageAdd() {
-  openPopup(popupAddCardFormOpen);
+  openPopup(popupAddCardForm);
   resetForm();
-  activePopupContent(popupAddCardFormOpen);
+  activePopupContent(popupAddCardForm);
 }
 
 function handleCardFormSubmit(event) {
@@ -183,7 +183,7 @@ galleryItemButtonHeart.forEach(function (image) {
 
 /** события на кнопку  */
 profileOpenPopupButton.addEventListener('click', openPopupFormProfile);
-profileAddButton.addEventListener('click', openPopupFormImageAdd);
+profileAddButton.addEventListener('click', popupFormImageAdd);
 
 /** кнопка "сохранить" */
 editProfileForm.addEventListener('submit', handleProfileFormSubmit);

@@ -71,7 +71,7 @@ function closePopup(popup) {
 }
 
 /** События на Escape */
-function eventEscape(event) {
+function handleEscKey(event) {
   if (event.key === 'Escape') {
     const activePopup = document.querySelector('.popup_opened');
     closePopup(activePopup);
@@ -79,11 +79,11 @@ function eventEscape(event) {
 }
 
 function closePopupEventEscape() {
-  document.addEventListener('keydown', eventEscape);
+  document.addEventListener('keydown', handleEscKey);
 }
 
 function removeEventEscape() {
-  document.removeEventListener('keydown', eventEscape);
+  document.removeEventListener('keydown', handleEscKey);
 }
 
 /** Pop-up форма редактирования профиля */
@@ -109,7 +109,7 @@ function handleProfileFormSubmit(event) {
 
 
 /** Pop-up форма добавления картинок */
-function popupFormImageAdd() {
+function openAddPopup() {
   openPopup(popupAddCardForm);
   resetForm();
   activePopupContent(popupAddCardForm);
@@ -143,9 +143,16 @@ popupCloseButtonsAll.forEach(PopupButtonClose => PopupButtonClose.addEventListen
 }))*/
 
 popupCloseButtonsAll.forEach(button => {
-  const popup = button.closest('.popup')
-  button.addEventListener('click', function () {
-    closePopup(popup);
+  const popups = document.querySelectorAll('.popup')
+  popups.forEach((popup) => {
+    popup.addEventListener('mousedown', (evt) => {
+      if (evt.target.classList.contains('popup_opened')) {
+        closePopup(popup)
+      }
+      if (evt.target.classList.contains('popup__button-close')) {
+        closePopup(popup)
+      }
+    })
   })
 })
 
@@ -183,7 +190,7 @@ galleryItemButtonHeart.forEach(function (image) {
 
 /** события на кнопку  */
 profileOpenPopupButton.addEventListener('click', openPopupFormProfile);
-profileAddButton.addEventListener('click', popupFormImageAdd);
+profileAddButton.addEventListener('click', openAddPopup);
 
 /** кнопка "сохранить" */
 editProfileForm.addEventListener('submit', handleProfileFormSubmit);

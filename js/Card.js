@@ -28,9 +28,9 @@ export class Card {
 
   _setEventListeners() {
     this._card.querySelector('.card__delete-button').addEventListener('click', event => {
-      event.currentTarget.closest('.card').remove()
+      this._card.remove();
     });
-    
+    this._element = null;
     this._card.querySelector('.card__choise-button').addEventListener('click', event => {
       event.target.classList.toggle('card__choise-button_active')
     });

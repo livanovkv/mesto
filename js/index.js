@@ -1,6 +1,6 @@
 import { Card } from './Card.js';
-
 import { FormValidator } from './FormValidator.js';
+import { initialCards } from './InitialCards.js';
 
 /** Задаем константы */
 const config = {
@@ -42,34 +42,6 @@ const popupZoomImageSrc = popupImageZoom.querySelector('.popup__image-item');
 const popups = document.querySelectorAll('.popup');
 const formAddCardValidator = new FormValidator(config, formAddCard);
 const formEditProfileValidator = new FormValidator(config, formEditProfile);
-/** Массив с фото */
-
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
 
 
 /** Pop-up */
@@ -79,9 +51,6 @@ function openPopup(popup) {
 }
 
 export function openImagePopup(linkImage, nameImage) {
-  popupZoomImageSrc.src = '';
-  popupZoomImageSrc.alt = '';
-  popupImageZoomTitle.textContent = '';
   popupZoomImageSrc.src = linkImage;
   popupZoomImageSrc.alt = nameImage;
   popupZoomImageSrc.textContent = nameImage;

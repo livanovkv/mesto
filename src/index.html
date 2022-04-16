@@ -8,7 +8,6 @@
   <meta name="description" content="Базовый js и работа с DOM">
   <meta name="keywords" content="js, работа с DOM">
   <meta name="author" content="Константин Ливанов">
-  <link rel="stylesheet" href="pages/index.css">
 </head>
 
 <body class="page">
@@ -18,7 +17,7 @@
   <main class="content">
     <!--Профиль-->
     <section class="profile">
-      <img src="images/ji_custo_ico.png" alt="Аватар профиля" class="profile__avatar-image">
+      <img src="<%=require('./images/ji_custo_ico.png')%>" alt="Аватар профиля" class="profile__avatar-image">
       <div class="profile__info">
         <h1 class="profile__title">Жак-Ив Кусто</h1>
         <button class="profile__edit-button" type="button" aria-label="Редактировать"></button>
@@ -90,6 +89,5 @@
       </div>
     </li>
   </template>
-  <script type="module" src="js/index.js"></script>
 </body>
 </html>

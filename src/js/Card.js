@@ -1,10 +1,10 @@
-import { openImagePopup } from './index.js';
-
 export class Card {
-  constructor(cardInfo, cardTemplate) {
+  constructor(cardInfo, cardTemplate, handleImageClick) {
     this._name = cardInfo.name;
     this._link = cardInfo.link;
+    this._id = cardInfo._id;
     this._cardTemplate = cardTemplate;
+    this._handleImageClick = handleImageClick;
   }
 
   _getTemplate() {
@@ -16,9 +16,11 @@ export class Card {
     return itemCard;
   }
 
+  
   generateCard() {
     this._card = this._getTemplate();
     this._cardImage = this._card.querySelector('.card__image');
+    this._likeButton = this._card.querySelector('.card__choise-button');
     this._setEventListeners();
     this._card.querySelector('.card__title').textContent = this._name;
     this._cardImage.src = this._link;
@@ -35,8 +37,6 @@ export class Card {
     this._card.querySelector('.card__choise-button').addEventListener('click', event => {
       event.target.classList.toggle('card__choise-button_active')
     });
-    this._cardImage.addEventListener('click', () => {
-      openImagePopup(this._link, this._name);
-    })
+    this._cardImage.addEventListener('click', () => this._handleImageClick());
   }
 }

@@ -1,13 +1,13 @@
 import '../pages/index.css';
-import { Card } from './Card.js';
-import { config } from './configValidation.js';
-import { FormValidator } from './FormValidator.js';
-import { initialCards } from './InitialCards.js';
-import { Section } from './Section.js';
-import { PopupWithImage } from './PopupWithImage.js';
-import { PopupWithForm } from './PopupWithForm.js';
-import { UserInfo } from './UserInfo.js';
-import * as constants from './constants.js';
+import { Card } from '../js/Card.js';
+import { config } from '../utils/configValidation.js';
+import { FormValidator } from '../js/FormValidator.js';
+import { initialCards } from '../utils/InitialCards.js';
+import { Section } from '../js/Section.js';
+import { PopupWithImage } from '../js/PopupWithImage.js';
+import { PopupWithForm } from '../js/PopupWithForm.js';
+import { UserInfo } from '../js/UserInfo.js';
+import * as constants from '../utils/constants.js';
 
 const formAddCardValidator = new FormValidator(config, constants.formAddCard);
 const formEditProfileValidator = new FormValidator(config, constants.formEditProfile);

@@ -47,11 +47,10 @@ function handleCardFormSubmit(data) {
 };
 
 function handleProfileFormSubmit(data) {
-  const { userName, userAbout } = data;
-  userInfo.setUserInfo(userName, userAbout);
+  const { title, subtitle } = data;
+  userInfo.setUserInfo(title, subtitle);
   popupEditProfile.close();
 };
-
 
 function renderCards(cardInfo) {
   section.setItem(createCard(cardInfo));
@@ -64,8 +63,6 @@ function createCard(cardInfo) {
   const cardItem = card.generateCard();
   return cardItem;
 }
-
-
 
 /** события на кнопку  */
 constants.profileOpenPopupButton.addEventListener('click', openPopupFormProfile);

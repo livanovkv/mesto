@@ -8,12 +8,12 @@ export class Card {
   }
 
   _getTemplate() {
-    const itemCard = document
+    const cardItem = document
       .querySelector(this._cardTemplate)
       .content
       .querySelector('.card')
       .cloneNode(true);
-    return itemCard;
+    return cardItem;
   }
 
   

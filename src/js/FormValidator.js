@@ -1,4 +1,3 @@
-
 export class FormValidator {
   constructor(formList, formActivePopup) {
     this._formActivePopup = formActivePopup;
@@ -41,7 +40,7 @@ export class FormValidator {
     if (!validityFormActive) {
       this._activationButtonSave();
     } else {
-      this._deactivateButtonSave();
+      this.deactivateButtonSave();
     };
   };
 

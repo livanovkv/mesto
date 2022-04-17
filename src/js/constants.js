@@ -1,6 +1,4 @@
   /** Profile */
-  export  const popupName = document.querySelector('.profile__title');
-  export  const popupAbout = document.querySelector('.profile__subtitle');
   export  const profileAddButton = document.querySelector('.profile__add-button');
   export  const profileOpenPopupButton = document.querySelector('.profile__edit-button');
   
@@ -18,13 +16,7 @@
   
   /** Card */
   export  const cardTemplate = '#card-template';
-  export  const cardList = document.querySelector('.gallery__grid');
+
   
-  /** Popup image zoom */
-  export  const popupImageZoom = document.querySelector('.popup_image');
-  export  const popupImageZoomTitle = popupImageZoom.querySelector('.popup__image-title');
-  export  const popupZoomImageSrc = popupImageZoom.querySelector('.popup__image-item');
-  
-  export  const popups = document.querySelectorAll('.popup');
 
   

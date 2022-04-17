@@ -2,7 +2,7 @@
   "name": "mesto",
   "version": "1.0.0",
   "description": "- [Ссылка на Github Pages](https://livanovkv.github.io/mesto/)",
-  "main": "index.js",
+  "main": "babel.config.js",
   "scripts": {
     "dev": "webpack serve",
     "build": "webpack --mode production",

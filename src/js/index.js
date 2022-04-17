@@ -47,8 +47,8 @@ function handleCardFormSubmit(data) {
 };
 
 function handleProfileFormSubmit(data) {
-  const { title, subtitle } = data;
-  userInfo.setUserInfo(title, subtitle);
+  const { userName, userAbout } = data;
+  userInfo.setUserInfo(userName, userAbout);
   popupEditProfile.close();
 };
 

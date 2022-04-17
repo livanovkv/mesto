@@ -43,10 +43,10 @@
       <h3 class="popup__form-title">Редактировать профиль</h3>
       <form class="popup__form" name="profileform" novalidate>
         <input id="inputName" class="popup__form-input popup__form-input_name" required placeholder="Имя" type="text"
-          name="profile_name" tabindex="1" minlength="2" maxlength="40">
+        name="userName" tabindex="1" minlength="2" maxlength="40">
         <span class="inputName-error popup__input-error">Вы пропустили это поле.</span>
         <input id="inputAbout" class="popup__form-input popup__form-input_about" required placeholder="О себе"
-          type="text" name="profile_about" tabindex="2" minlength="2" maxlength="200">
+          type="text" name="userAbout" tabindex="2" minlength="2" maxlength="200">
         <span class="inputAbout-error popup__input-error">Вы пропустили это поле.</span>
         <button class="popup__form-button-save" type="submit" tabindex="3">Сохранить</button>
       </form>
@@ -60,10 +60,10 @@
       <h3 class="popup__form-title">Новое место</h3>
       <form class="popup__form" name="cardform" novalidate>
         <input id="inputTitle" class="popup__form-input popup__form-input_title" required placeholder="Название"
-          type="text" name="profile_name" tabindex="1" minlength="2" maxlength="30">
+          type="text" name="cardTitle" tabindex="1" minlength="2" maxlength="30">
         <span class="inputTitle-error popup__input-error">Вы пропустили это поле.</span>
         <input id="inputUrl" class="popup__form-input popup__form-input_link" required placeholder="Ссылка на картинку"
-          type="url" name="profile_about" tabindex="2">
+          type="url" name="cardLink" tabindex="2">
         <span class="inputUrl-error popup__input-error">Вы пропустили это поле.</span>
         <button class="popup__form-button-save" type="submit" tabindex="3">Создать</button>
       </form>

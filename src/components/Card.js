@@ -16,7 +16,7 @@ export class Card {
     return cardItem;
   }
 
-  
+
   generateCard() {
     this._card = this._getTemplate();
     this._cardImage = this._card.querySelector('.card__image');
@@ -33,8 +33,8 @@ export class Card {
       this._card.remove();
       this._element = null;
     });
-    
-    this._card.querySelector('.card__choise-button').addEventListener('click', event => {
+
+    this._likeButton.addEventListener('click', event => {
       event.target.classList.toggle('card__choise-button_active')
     });
     this._cardImage.addEventListener('click', () => this._handleImageClick());

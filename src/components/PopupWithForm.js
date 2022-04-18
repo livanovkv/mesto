@@ -4,8 +4,15 @@ export class PopupWithForm extends Popup {
     super(popupSelector);
     this._handleSabmit = handleSabmit;
     this._form = this._popup.querySelector('.popup__form');
-    this._inputs = [...this._form.querySelectorAll('.popup__form-input')];
+
   };
+
+  setInputValues(data) {
+    this._inputList.forEach((input) => {
+      // тут вставляем в `value` инпута данные из объекта по атрибуту `name` этого инпута
+      input.value = data[input.name];
+    });
+  }
 
   close() {
     super.close();

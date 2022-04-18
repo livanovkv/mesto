@@ -1,12 +1,12 @@
 import '../pages/index.css';
-import { Card } from '../js/Card.js';
+import { Card } from '../components/Card.js';
 import { config } from '../utils/configValidation.js';
-import { FormValidator } from '../js/FormValidator.js';
+import { FormValidator } from '../components/FormValidator.js';
 import { initialCards } from '../utils/InitialCards.js';
-import { Section } from '../js/Section.js';
-import { PopupWithImage } from '../js/PopupWithImage.js';
-import { PopupWithForm } from '../js/PopupWithForm.js';
-import { UserInfo } from '../js/UserInfo.js';
+import { Section } from '../components/Section.js';
+import { PopupWithImage } from '../components/PopupWithImage.js';
+import { PopupWithForm } from '../components/PopupWithForm.js';
+import { UserInfo } from '../components/UserInfo.js';
 import * as constants from '../utils/constants.js';
 
 const formAddCardValidator = new FormValidator(config, constants.formAddCard);
@@ -31,7 +31,6 @@ function openPopupFormProfile() {
 };
 
 function openAddPopup() {
-  constants.formAddCard.reset()
   formAddCardValidator.clearErrorsForm();
   popupAddImage.open();
 };
@@ -42,7 +41,6 @@ function handleCardFormSubmit(data) {
     name: data.cardTitle,
     link: data.cardLink
   }));
-  formAddCardValidator.deactivateButtonSave();
   popupAddImage.close();
 };
 

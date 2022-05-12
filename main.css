@@ -24,7 +24,7 @@
 .popup__form-button-save_disabled{background-color:#fff;border:1px solid #c4c4c4;color:#c4c4c4}
 .popup__input-error{color:red;font-size:12px;line-height:15px;margin:5px 0 0;visibility:hidden}
 .popup__input-error_visible{opacity:1;visibility:visible}
-.popup__form-button-save_delete-confirm{argin-left:36px;margin-bottom:37px;margin-right:36px}@media screen and (max-width:618px){.popup__form-button-save_delete-confirm{margin:15px 22px 25px}}
+.popup__form-button-save_delete-confirm{margin-bottom:37px;margin-left:36px;margin-right:36px}@media screen and (max-width:618px){.popup__form-button-save_delete-confirm{margin:15px 22px 25px}}
 .popup__form-title_delete-confirm{margin-bottom:16px}
 .popup__image-conteiner{display:flex;margin:auto;padding:0;position:relative}
 .popup__image-item{margin:0;max-height:75vh;max-width:75vw;-o-object-fit:contain;object-fit:contain;padding:0;vertical-align:bottom}

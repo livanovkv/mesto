@@ -17,7 +17,9 @@
   <main class="content">
     <!--Профиль-->
     <section class="profile">
-      <img src="<%=require('./images/ji_custo_ico.png')%>" alt="Аватар профиля" class="profile__avatar-image">
+      <div class="profile__circle">
+        <img src="#" alt="Аватар профиля" class="profile__avatar-image">
+      </div>
       <div class="profile__info">
         <h1 class="profile__title">Жак-Ив Кусто</h1>
         <button class="profile__edit-button" type="button" aria-label="Редактировать"></button>
@@ -41,24 +43,37 @@
     <div class="popup__form-conteiner">
       <button class="popup__button-close" type="button" aria-label="Закрыть"></button>
       <h3 class="popup__form-title">Редактировать профиль</h3>
-      <form class="popup__form" name="profileform" novalidate>
+      <form class="popup__form popup_profile-form" name="profileform" method="get" novalidate>
         <input id="inputName" class="popup__form-input popup__form-input_name" required placeholder="Имя" type="text"
-        name="userName" tabindex="1" minlength="2" maxlength="40">
+          name="name" tabindex="1" minlength="2" maxlength="40">
         <span class="inputName-error popup__input-error">Вы пропустили это поле.</span>
         <input id="inputAbout" class="popup__form-input popup__form-input_about" required placeholder="О себе"
-          type="text" name="userAbout" tabindex="2" minlength="2" maxlength="200">
+          type="text" name="about" tabindex="2" minlength="2" maxlength="200">
         <span class="inputAbout-error popup__input-error">Вы пропустили это поле.</span>
         <button class="popup__form-button-save" type="submit" tabindex="3">Сохранить</button>
       </form>
     </div>
   </section>
 
+  <!--Popup редактирования аватара профиля-->
+  <div class="popup popup_avatar-edit">
+    <div class="popup__form-conteiner">
+      <button class="popup__button-close" type="button" aria-label="Закрыть"></button>
+      <h3 class="popup__form-title">Обновить аватар</h3>
+      <form class="popup__form popup_avatar-edit-form" name="addAvatar" action="#" method="get" novalidate>
+        <input id="avatarUrl-input" class="popup__form-input popup__form-input_avatar-url" required
+          placeholder="Ссылка на картинку" spellcheck="true" type="url" name="avatarUrl">
+        <span class="avatarUrl-input-error popup__input-error"></span>
+        <button class="popup__form-button-save" type="submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
   <!--Popup форма добавления карточки-->
   <section class="popup popup_add-card">
     <div class="popup__form-conteiner">
       <button class="popup__button-close" type="button" aria-label="Закрыть"></button>
       <h3 class="popup__form-title">Новое место</h3>
-      <form class="popup__form" name="cardform" novalidate>
+      <form class="popup__form popup_add-card-form" name="cardform" method="get" novalidate>
         <input id="inputTitle" class="popup__form-input popup__form-input_title" required placeholder="Название"
           type="text" name="cardTitle" tabindex="1" minlength="2" maxlength="30">
         <span class="inputTitle-error popup__input-error">Вы пропустили это поле.</span>
@@ -78,6 +93,16 @@
       <h2 class="popup__image-title"></h2>
     </div>
   </section>
+
+  <!--Popup подтверждения удаления карточки-->
+  <div class="popup popup_delete-confirm">
+    <div class="popup__form-conteiner">
+      <button class="popup__button-close" type="button" aria-label="Закрыть"></button>
+      <h3 class="popup__form-title popup__form-title_delete-confirm">Вы уверены?</h3>
+      <button class="popup__form-button-save popup__form-button-save_delete-confirm" type="submit">Да</button>
+    </div>
+  </div>
+
   <!--Шаблон карточки фото-->
   <template id="card-template">
     <li class="card">
@@ -85,9 +110,13 @@
       <img src="#" alt="" class="card__image">
       <div class="card__description">
         <h2 class="card__title"></h2>
-        <button class="card__choise-button" type="button" aria-label="Добавить в избранное"></button>
+        <div class="card__like-group">
+          <button class="card__choise-button" type="button" aria-label="Добавить в избранное"></button>
+          <span class="card__number-likes"></span>
+        </div>
       </div>
     </li>
   </template>
 </body>
+
 </html>

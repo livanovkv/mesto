@@ -8,6 +8,9 @@ export class PopupWithImage extends Popup {
   };
 
   open(nameImage, linkImage) {
+    this._opupZoomImageSrc.src = '';
+    this._opupZoomImageSrc.alt = '';
+    this._popupImageZoomTitle.textContent = '';
     this._popupZoomImageSrc.src = linkImage;
     this._popupZoomImageSrc.alt = nameImage;
     this._popupImageZoomTitle.textContent = nameImage;

@@ -4,5 +4,5 @@ export const config = {
   submitButtonSelector: ".popup__form-button-save",
   inactiveButtonClass: "popup__form-button-save_disabled",
   inputErrorClass: "popup__form-input_error",
-  errorClass: "popup__input-error_visible",
+  errorClass: "popup__input-error_visible"
 };

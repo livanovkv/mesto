@@ -10,4 +10,7 @@
   line-height: 16px;
   text-align: center;
   color: black;
+  position: absolute;
+  right: 25px;
+  bottom: 17px;
 }
